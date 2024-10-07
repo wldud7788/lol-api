@@ -8,9 +8,8 @@ const RotationChampList = () => {
   // 로테이션 아이디들
   useEffect(() => {
     const fetching = async () => {
-      const rotationResponse = await fetch(
-        "http://localhost:3000/api/rotation"
-      );
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+      const rotationResponse = await fetch(`${apiUrl}/rotation`);
       const data = await rotationResponse.json();
       setRotationChamp(data);
     };
