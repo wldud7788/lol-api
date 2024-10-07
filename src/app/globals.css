@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #000000;
+  --foreground: #ffffff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+  @apply pt-[100px] pb-[150px];
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+/* main css start */
+.header {
+  @apply bg-gray-800 text-white py-4 fixed top-0 w-full z-10;
+}
+.footer {
+  @apply bg-gray-800 p-4 mt-8 fixed bottom-0 w-full;
+}
+.footer > div {
+  @apply container mx-auto text-center text-white text-sm;
+}
+.nav {
+  @apply container mx-auto flex justify-around;
+}
+.main {
+  @apply container mx-auto mt-10;
+}
+.main .title {
+  @apply text-center;
+}
+.main .title hq {
+  @apply text-3xl font-bold;
+}
+.main .title p {
+  @apply mt-4 text-gray-500;
+}
+.main .link_container {
+  @apply mt-[40px] flex flex-col justify-center gap-10;
+}
+.main .link_container > div {
+  @apply flex flex-col justify-center gap-10;
+}
+.main .link_container a {
+  @apply flex flex-col justify-center items-center gap-5 text-amber-400;
+}
+/* main css end */
+
+/* champions css start */
+.champion_list_container h1,
+.item_list_container h1 {
+  @apply text-2xl font-bold mb-4;
+}
+.champion_card_container,
+.item_card_container {
+  @apply grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4;
+}
+.champion_card_container > div {
+  @apply border rounded p-4 hover:shadow-lg;
+}
+.item_card_container div {
+  @apply border rounded p-4 hover:shadow-lg flex flex-col items-center gap-5;
+}
+.item_card_container h3 {
+  @apply text-xl;
+}
+
+/* champions css end */
+
+/* rotation css start */
+.rotation_container h1 {
+  @apply text-3xl font-bold mb-4;
+}
+.rotation_container .card_container {
+  @apply grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4;
+}
+.rotation_container .card_container a {
+  @apply border rounded p-4 hover:shadow-lg;
+}
+/* rotation css end */
+
+/* detail css start */
+.detail_container {
+  @apply max-w-3xl mx-auto;
+}
+.detail_container h1 {
+  @apply text-4xl font-bold mb-4;
+}
+.detail_container h2 {
+  @apply text-2xl text-gray-600 mb-4;
+}
+.detail_container p {
+  @apply mt-4;
+}
+.text_area {
+  @apply mt-6;
+}
+.text_area h3 {
+  @apply text-xl font-semibold;
+}
+/* detail css end */
