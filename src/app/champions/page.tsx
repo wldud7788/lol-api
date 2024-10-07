@@ -2,8 +2,6 @@ import Card from "@/components/card";
 import { ChampionType } from "@/types/Champion";
 import { fetchChampion } from "@/utils/serverApi";
 import { Metadata } from "next";
-// import { Suspense } from "react";
-// import Loading from "./loading";
 export const metadata: Metadata = {
   title: "리그오브레전드 - 챔피언 목록",
   description: "Riot Games API를 활용한 챔피언 목록",

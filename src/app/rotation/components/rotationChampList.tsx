@@ -2,7 +2,6 @@
 import { ChampionType } from "@/types/Champion";
 import { useEffect, useState } from "react";
 import Card from "@/components/card";
-// import Loading from "../loading";
 
 const RotationChampList = () => {
   const [rotationChamp, setRotationChamp] = useState([]);
