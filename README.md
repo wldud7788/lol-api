@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+# 배포 링크
+[✨lol-api](https://lol-api-ten.vercel.app/)</br>
+</br>
 
-First, run the development server:
+## Lol-API
+ 이 웹사이트는 롤 OPEN API를 활용하여 챔피언 정보, 아이템 정보, 로테이션 챔피언 정보를 확인할 수 있는 공간입니다.</br>
+ 각 챔피언의 상세정보와 모든 아이템의 간단한 설명을 볼 수 있고, 
+ 매주 변경되는 롤 로테이션 챔피언의 정보를 확인할 수 있습니다. </br>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+</br>
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 용도
+- 학습용도로 OPEN API를 활용하여 NEXT.js와 TypeScript에 대한 이해를 위해 프로젝트를 제작했습니다.
+- SSR, ISR, CSR, SSR을 익히기 위함
+</br>
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 구현기능
+- 메인페이지
+  챔피언 목록보기, 금주 로테이션 챔피언 확인, 아이템 목록 확인 링크가 있습니다.
+   </br>
+  ![스크린샷 2024-10-08 오전 2 55 40](https://github.com/user-attachments/assets/13665ff7-23ad-4915-bba5-23254a4a321a)
 
-## Learn More
+- 챔피언 목록
+   </br>
+  ![스크린샷 2024-10-08 오전 3 28 04](https://github.com/user-attachments/assets/a232520e-44db-4ab2-89f1-33a3fcf1b56a)
+  - Riot Open Api를 활용하여 가져올 데이터의 타입을 지정해주고, ISR로 작성하였습니다.
+  - server action을 이용하여 구현하였습니다.
+  - ISR로 작성하였습니다.
+    
+- 챔피언 디테일 페이지
+  - 각 챔피언의 정보를 확인할 수 있습니다.
+  - SSR로 작성하였습니다.
+    
+- 아이템목록
+  - 각 아이템 리스트를 확인할 수 있습니다.
+  - server action을 이용하여 구현하였습니다.
+  - SSG로 작성하였습니다.
+ 
+- 로테이션 챔피언
+  - RIOT API를 발급받아 route핸들러를 이용하여 구현하였습니다.
+  - CSR로 작성하였습니다.
 
-To learn more about Next.js, take a look at the following resources:
+</br>
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 기술스택
+- NEXT.js, TypeScript, TailWind
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+</br>
 
-## Deploy on Vercel
+## 트러블슈팅
+1. https://velog.io/@rooftop7788/LOLAPI%ED%99%9C%EC%9A%A9
+2. https://velog.io/@rooftop7788/LOLAPI%ED%99%9C%EC%9A%A92
+3. https://velog.io/@rooftop7788/LOLAPI%ED%99%9C%EC%9A%A93
+   위의 링크에 트러블이 정리되어있습니다.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 소감
+프로젝트를 진행하면서 NEXT.js의 동작 방식과 SSR ISR, CSR, SSG에 대해 어느정도 파악이 된 것 같다.
