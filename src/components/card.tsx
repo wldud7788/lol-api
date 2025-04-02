@@ -8,15 +8,21 @@ type CardProps = {
 };
 const Card: React.FC<CardProps> = ({ item }) => {
   return (
-    <Link key={item.blurb} href={`./champions/${item.name}`}>
+    <Link
+      key={item.blurb}
+      href={`./champions/${item.name}`}
+      className="text-center"
+    >
       <Image
         src={`${imgUrl}${item.image.full}`}
         width={300}
         height={300}
-        alt=""
+        alt="챔피언 이미지"
       />
-      <p>이름: {item.name}</p>
-      <p>타이틀: {item.title}</p>
+      <p className="break-words break-keep line-clamp-1">{item.name}</p>
+      <p className="text-xs break-words break-keep line-clamp-2">
+        {item.title}
+      </p>
     </Link>
   );
 };

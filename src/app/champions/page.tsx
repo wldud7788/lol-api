@@ -24,7 +24,7 @@ export default async function Home() {
         <div className="champion_card_container">
           {champions?.map((item: ChampionType) => {
             return (
-              <div key={item.blurb}>
+              <div key={item.id}>
                 <Card item={item} />
               </div>
             );

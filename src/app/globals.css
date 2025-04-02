@@ -40,7 +40,7 @@ body {
   @apply container mx-auto flex justify-around;
 }
 .main {
-  @apply container mx-auto mt-10;
+  @apply container mx-auto p-4;
 }
 .main .title {
   @apply text-center;
@@ -52,7 +52,7 @@ body {
   @apply mt-4 text-gray-500;
 }
 .main .link_container {
-  @apply mt-[40px] flex flex-col justify-center gap-10;
+  @apply mt-[40px] flex flex-col xl:flex-row justify-center gap-10;
 }
 .main .link_container > div {
   @apply flex flex-col justify-center gap-10;
@@ -72,10 +72,10 @@ body {
   @apply grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4;
 }
 .champion_card_container > div {
-  @apply border rounded p-4 hover:shadow-lg;
+  @apply border rounded p-4 hover:shadow-lg border-[#1c1c1c87];
 }
 .item_card_container div {
-  @apply border rounded p-4 hover:shadow-lg flex flex-col items-center gap-5;
+  @apply border border-[#1c1c1c87] rounded p-4 hover:shadow-lg flex flex-col items-center gap-5;
 }
 .item_card_container h3 {
   @apply text-xl;

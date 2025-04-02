@@ -45,7 +45,7 @@ const page = async ({ params }: Props) => {
               <h2>{item.title}</h2>
               <Image
                 src={`${imgUrl}${item.image.full}`}
-                alt=""
+                alt="챔피언 이미지"
                 width={300}
                 height={300}
               />

@@ -17,20 +17,25 @@ const ItemPage = async () => {
       <div className="item_list_container">
         <h1>아이템 목록</h1>
         <div className="item_card_container">
-          {itemList?.map((item) => {
+          {itemList?.map((item, idx) => {
             const itemDescriptions = item.plaintext.split(".");
 
             return (
-              <div key={item.name}>
+              <div key={`${item.name}-${idx}`} className="text-center">
                 <Image
                   src={`${imgUr2}${item.image.full}`}
                   width={100}
                   height={100}
-                  alt=""
+                  alt="아이템 이미지"
                 />
-                <h3>{item.name}</h3>
+                <p className="break-words break-keep">{item.name}</p>
                 {itemDescriptions.map((desc, index) => (
-                  <p key={index}>{desc.trim()}</p>
+                  <p
+                    className="line-clamp-2 text-xs break-words break-keep whitespace-normal"
+                    key={`item-${index}`}
+                  >
+                    {desc.trim()}
+                  </p>
                 ))}
               </div>
             );

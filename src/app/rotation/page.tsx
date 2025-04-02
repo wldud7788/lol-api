@@ -1,5 +1,7 @@
 import { Metadata } from "next";
 import RotationChampList from "./components/rotationChampList";
+import { Suspense } from "react";
+import Loading from "./loading";
 
 export const metadata: Metadata = {
   title: "리그오브레전드 -로테이션 챔피언 목록",
@@ -15,7 +17,9 @@ const RotationPage = () => {
     <main className="main">
       <div className="champion_list_container">
         <h1>로테이션 챔피언 목록</h1>
-        <RotationChampList />
+        <Suspense fallback={<Loading />}>
+          <RotationChampList />
+        </Suspense>
       </div>
     </main>
   );
