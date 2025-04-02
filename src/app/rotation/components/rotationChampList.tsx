@@ -5,12 +5,10 @@ import Card from "@/components/card";
 
 const RotationChampList = () => {
   const [rotationChamp, setRotationChamp] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
 
   // 로테이션 아이디들
   useEffect(() => {
     const fetching = async () => {
-      setIsLoading(true);
       try {
         const apiUrl = process.env.NEXT_PUBLIC_API_URL;
         const rotationResponse = await fetch(`${apiUrl}/rotation`);
@@ -18,8 +16,6 @@ const RotationChampList = () => {
         setRotationChamp(data);
       } catch (error) {
         console.error("로테이션 챔피언 로드 중 에러: ", error);
-      } finally {
-        setIsLoading(false);
       }
     };
     fetching();
